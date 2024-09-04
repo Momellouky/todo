@@ -1,6 +1,6 @@
 package com.todo.view;
 
-public class ShowTasksMenu extends ConsoleState{
+public class ListTasksMenu extends ConsoleState{
     @Override
     public void show() {
 
@@ -8,7 +8,7 @@ public class ShowTasksMenu extends ConsoleState{
 
         // TODO : List these tasks
 
-        System.out.println("ShowTasks view");
+        System.out.println("List all tasks view");
 
     }
 }
