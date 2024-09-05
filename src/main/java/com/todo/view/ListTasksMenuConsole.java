@@ -1,6 +1,6 @@
 package com.todo.view;
 
-public class ListTasksMenu extends ConsoleState{
+public class ListTasksMenuConsole extends ConsoleState{
     @Override
     public void show() {
 

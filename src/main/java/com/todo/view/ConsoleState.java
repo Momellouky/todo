@@ -10,5 +10,11 @@ public abstract class ConsoleState extends Interface{
 
     public void setConsole(Console console) {
         this.console = console;
+
     }
+
+    public void setInterfaceObserver(InterfaceObserver interfaceObserver){
+        this.interfaceObserver = interfaceObserver;
+    }
+
 }

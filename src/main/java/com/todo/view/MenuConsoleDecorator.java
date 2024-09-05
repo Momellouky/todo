@@ -12,14 +12,26 @@ public class MenuConsoleDecorator extends MenuConsole{
         this.menuConsole = menuConsole;
     }
 
+    public MenuConsoleDecorator(MenuConsole menuConsole, ConsoleStateFactory consoleStateFactory, Interface console){
+        super(consoleStateFactory);
+        this.menuConsole = menuConsole;
+        this.menuConsole.setConsole((Console) console);
+    }
+
     @Override
     public void show(){
         this.menuConsole.show();
 
         String userInput = getUserInput();
         try {
-            ConsoleState nextConsoleState = consoleStateFactory.Instantiate(userInput);
-            this.console.setConsoleState(nextConsoleState);
+            ConsoleState nextConsoleState = consoleStateFactory.Instantiate(userInput, this.menuConsole.getConsole());
+            this.interfaceObserver = this.menuConsole.getConsole().getInterfaceObserver();
+            System.out.println("In MenuConsoleDecorator.show method: " + this.interfaceObserver);
+            nextConsoleState.setInterfaceObserver(this.interfaceObserver);
+//            this.console.setInterfaceObserver(this.interfaceObserver);
+//            this.console.setConsoleState(nextConsoleState);
+            this.menuConsole.getConsole().setInterfaceObserver(this.interfaceObserver);
+            this.menuConsole.getConsole().setConsoleState(nextConsoleState);
         } catch (Exception e) {
             e.printStackTrace();
         }

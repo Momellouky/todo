@@ -19,8 +19,4 @@ public class MenuConsole extends ConsoleState{
 
     }
 
-    public void setConsole(Console console){
-        this.console = console;
-    }
-
 }

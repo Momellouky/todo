@@ -10,9 +10,14 @@ public class Application {
         Interface console = new Console(new MenuConsoleDecorator(
                 menuConsole, consoleStateFactory
         ));
-//        menuConsole.setConsole((Console) console);
+        InterfaceObserver consoleObserver = new IOHandler(console);
 
+        menuConsole.setConsole((Console) console);
+        menuConsole.setInterfaceObserver(consoleObserver);
+
+        ((Console)console).setInterfaceObserver(consoleObserver);
         ((Console)console).getConsoleState().setConsole((Console) console);
+
         while (true){
             console.show();
         }
