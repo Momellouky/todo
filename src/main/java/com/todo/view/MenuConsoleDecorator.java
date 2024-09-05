@@ -26,7 +26,6 @@ public class MenuConsoleDecorator extends MenuConsole{
         try {
             ConsoleState nextConsoleState = consoleStateFactory.Instantiate(userInput, this.menuConsole.getConsole());
             this.interfaceObserver = this.menuConsole.getConsole().getInterfaceObserver();
-            System.out.println("In MenuConsoleDecorator.show method: " + this.interfaceObserver);
             nextConsoleState.setInterfaceObserver(this.interfaceObserver);
 //            this.console.setInterfaceObserver(this.interfaceObserver);
 //            this.console.setConsoleState(nextConsoleState);

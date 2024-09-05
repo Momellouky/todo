@@ -7,6 +7,6 @@ public class AddTaskController extends Controller{
         // TODO : get the data from the this.interfaceObserver object, process it,
         //      interfaceObserver
 
-        System.out.println("AddTaskController action method");
+        System.out.println("AddTaskController action method. Saving task on the disk");
     }
 }

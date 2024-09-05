@@ -1,5 +1,7 @@
 package com.todo;
 
+import com.todo.Controller.ControllerFactory;
+import com.todo.Controller.ControllerFactoryMaker;
 import com.todo.view.*;
 
 public class Application {
@@ -10,7 +12,9 @@ public class Application {
         Interface console = new Console(new MenuConsoleDecorator(
                 menuConsole, consoleStateFactory
         ));
-        InterfaceObserver consoleObserver = new IOHandler(console);
+
+        ControllerFactory controllerFactory = new ControllerFactoryMaker();
+        InterfaceObserver consoleObserver = new IOHandler(console, controllerFactory);
 
         menuConsole.setConsole((Console) console);
         menuConsole.setInterfaceObserver(consoleObserver);

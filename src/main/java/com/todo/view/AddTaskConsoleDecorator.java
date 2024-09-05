@@ -29,7 +29,7 @@ public class AddTaskConsoleDecorator extends AddTaskConsole{
                     new MenuConsoleDecorator(
                             new MenuConsole(consoleStateFactory), consoleStateFactory, this.addTaskConsole.getConsole())
             );
-            this.interfaceObserver.handle();
+            this.interfaceObserver.handle(this);
         } catch (Exception e) {
 //            System.out.println("Exception: " + e.getMessage());
             e.printStackTrace();

@@ -4,6 +4,6 @@ import com.todo.view.ConsoleState;
 
 public interface ControllerFactory {
 
-    Controller Instantiate(ConsoleState consoleState);
+    Controller Instantiate(ConsoleState consoleState) throws Exception;
 
 }

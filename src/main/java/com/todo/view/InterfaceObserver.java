@@ -12,7 +12,7 @@ public abstract class InterfaceObserver {
     protected Task task;
     ControllerFactory controllerFactory;
 
-    public abstract void handle();
+    public abstract void handle(ConsoleState consoleState);
 
     public void setTask(Task task) {
         this.task = task;

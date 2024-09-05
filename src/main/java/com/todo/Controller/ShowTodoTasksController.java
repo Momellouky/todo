@@ -8,7 +8,7 @@ public class ShowTodoTasksController extends Controller {
 
         // TODO : print the data on the screen
 
-        System.out.println("ShowTodoTasksController action");
+        System.out.println("ShowTodoTasksController action. Fetching tasks from the disk");
 
     }
 }

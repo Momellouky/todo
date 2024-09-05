@@ -15,11 +15,17 @@ public class IOHandler extends InterfaceObserver{
     }
 
     @Override
-    public void handle() {
+    public void handle(ConsoleState consoleState) {
 
         // TODO : receive the task
 
         // TODO : send the task to the controller
+        try {
+            Controller controller = this.controllerFactory.Instantiate(consoleState);
+            controller.action();
+        } catch (Exception e) {
+            System.out.println("IOHandler.handle() Exception" + e.getMessage());
+        }
 
     }
 }

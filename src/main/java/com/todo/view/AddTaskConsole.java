@@ -14,5 +14,8 @@ public class AddTaskConsole extends ConsoleState{
 
     }
 
-
+    @Override
+    public String toString() {
+        return "AddTaskConsole";
+    }
 }

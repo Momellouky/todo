@@ -11,4 +11,10 @@ public class ListTasksMenuConsole extends ConsoleState{
         System.out.println("List all tasks view");
 
     }
+
+    @Override
+    public String toString() {
+        return "ListTasksMenuConsole";
+    }
 }
+

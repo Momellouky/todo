@@ -28,7 +28,6 @@ public class Console extends Interface{
 
     public void setInterfaceObserver(InterfaceObserver interfaceObserver){
         this.interfaceObserver = interfaceObserver;
-        System.out.println("In setInterfaceObserver method" + this.interfaceObserver);
     }
 
     public InterfaceObserver getInterfaceObserver(){
