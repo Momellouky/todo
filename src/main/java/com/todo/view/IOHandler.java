@@ -7,7 +7,10 @@ public class IOHandler extends InterfaceObserver{
     }
 
     @Override
-    public void update() {
-        System.out.println("I/O Handler");
+    public void handle() {
+
+        // TODO : receive the task
+        // TODO : send the task to the controller
+
     }
 }

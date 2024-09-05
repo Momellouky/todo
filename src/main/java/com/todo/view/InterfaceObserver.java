@@ -10,7 +10,7 @@ public abstract class InterfaceObserver {
     protected Interface observableInterface;
     protected Task task;
 
-    public abstract void update();
+    public abstract void handle();
 
     public void setTask(Task task) {
         this.task = task;
