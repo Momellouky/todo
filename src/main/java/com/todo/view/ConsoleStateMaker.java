@@ -9,16 +9,21 @@ public class ConsoleStateMaker implements ConsoleStateFactory{
                 return addTaskConsole;
             }
             else if(userInput.toLowerCase().equals("b")){
-                return new ListTasksMenuConsole();
+                ConsoleState listTasksConsole = new ListTasksMenuConsoleDecorator(
+                        new ListTasksMenuConsole(), (Console) console
+                );
+//                return new ListTasksMenuConsole();
+                return listTasksConsole;
             }
             else if(userInput.toLowerCase().equals("q")){
-                ConsoleStateFactory consoleStateFactory = new ConsoleStateMaker();
-                MenuConsole menuConsole = new MenuConsole(consoleStateFactory);
-                MenuConsoleDecorator menuConsoleDecorator = new MenuConsoleDecorator(
-                    menuConsole, consoleStateFactory, (Console) console
-                );
-//                return new MenuConsole(consoleStateFactory);
-                return menuConsoleDecorator;
+//                ConsoleStateFactory consoleStateFactory = new ConsoleStateMaker();
+//                MenuConsole menuConsole = new MenuConsole(consoleStateFactory);
+//                MenuConsoleDecorator menuConsoleDecorator = new MenuConsoleDecorator(
+//                    menuConsole, consoleStateFactory, (Console) console
+//                );
+////                return new MenuConsole(consoleStateFactory);
+//                return menuConsoleDecorator;
+                System.exit(0);
             }
         }
 
