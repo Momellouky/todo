@@ -1,5 +1,6 @@
 package com.todo.view;
 
+import com.todo.Controller.ControllerFactory;
 import com.todo.model.Task;
 
 public abstract class InterfaceObserver {
@@ -9,6 +10,7 @@ public abstract class InterfaceObserver {
 
     protected Interface observableInterface;
     protected Task task;
+    ControllerFactory controllerFactory;
 
     public abstract void handle();
 
@@ -18,5 +20,13 @@ public abstract class InterfaceObserver {
 
     public Task getTask() {
         return task;
+    }
+
+    public ControllerFactory getControllerFactory() {
+        return controllerFactory;
+    }
+
+    public void setControllerFactory(ControllerFactory controllerFactory) {
+        this.controllerFactory = controllerFactory;
     }
 }
