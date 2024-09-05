@@ -14,7 +14,7 @@ public class MenuConsole extends ConsoleState{
         // TODO : implement the main menu of the application
 
         System.out.println("A- Add a new task");
-        System.out.println("B- List all taks");
+        System.out.println("B- List all tasks");
         System.out.println("Q- Exit");
         // TODO : System.out.println("C- Mark task as complete");
 
