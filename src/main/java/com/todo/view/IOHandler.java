@@ -21,7 +21,7 @@ public class IOHandler extends InterfaceObserver{
 
         // TODO : send the task to the controller
         try {
-            Controller controller = this.controllerFactory.Instantiate(consoleState);
+            Controller controller = this.controllerFactory.Instantiate(consoleState, this);
             controller.action();
         } catch (Exception e) {
             System.out.println("IOHandler.handle() Exception" + e.getMessage());

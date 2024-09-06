@@ -1,6 +1,18 @@
 package com.todo.Controller;
 
+import com.todo.data.DataStore;
+import com.todo.view.InterfaceObserver;
+
 public class ShowTodoTasksController extends Controller {
+
+    public ShowTodoTasksController(InterfaceObserver interfaceObserver) {
+        super(interfaceObserver);
+    }
+
+    public ShowTodoTasksController(InterfaceObserver interfaceObserver, DataStore dataStore) {
+        super(interfaceObserver, dataStore);
+    }
+
     @Override
     public void action() {
 
