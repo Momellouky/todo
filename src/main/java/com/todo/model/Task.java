@@ -70,11 +70,11 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", deadline='" + deadline + '\'' +
-                ", priority=" + priority +
-                ", status=" + status +
+                "name:'" + name + '\'' +
+                ", description:'" + description + '\'' +
+                ", deadline:'" + deadline + '\'' +
+                ", priority:" + priority +
+                ", status:" + status +
                 '}';
     }
 }
