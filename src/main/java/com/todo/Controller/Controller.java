@@ -22,4 +22,8 @@ public abstract class Controller {
     public void setDataStore(DataStore dataStore) {
         this.dataStore = dataStore;
     }
+
+    public InterfaceObserver getInterfaceObserver() {
+        return interfaceObserver;
+    }
 }
